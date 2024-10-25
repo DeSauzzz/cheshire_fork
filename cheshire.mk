@@ -6,10 +6,10 @@
 # Christopher Reinwardt <creinwar@student.ethz.ch>
 # Paul Scheffler <paulsc@iis.ee.ethz.ch>
 
-BENDER ?= bender
+BENDER ?= /home/abobus/.cargo/bin/bender
 
 # Caution: Questasim requires this to point to the *actual* compiler install path
-CXX_PATH := $(shell which $(CXX))
+CXX_PATH := $(/home/abobus/.local/lib/python3.10/site-packages/cmake/data/bin/cmake $(CXX))
 
 VLOG_ARGS ?= -suppress 2583 -suppress 13314 -timescale 1ns/1ps
 
